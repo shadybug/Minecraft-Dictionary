@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="/static/style.css" />
+    </head>
+    <body>
+        <div id="top">
+            <h1>Reptile Dictionary</h1>
+        </div>
+
+        <p>This is the homepage!</p>
+        <select id="selection">
+            {% for entry in entries %}
+                <option value={{entry}}>{{entry}}</option>
+            {% endfor %}
+        </select>
+        <button onclick='window.location = "/def/" + $("#selection").val();'>Look up</button>
+    </body>
+</html>
